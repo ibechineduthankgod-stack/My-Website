@@ -92,7 +92,7 @@ transition:0.3s;
 
 .service-card:hover{
 transform:translateY(-10px);
-box-shadow:0 15px 30px rgba(0,0,0,0.2);
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 .portfolio-container{
 display:grid;
@@ -122,6 +122,13 @@ transition:0.3s;
 
 .portfolio-item:hover img{
 transform:scale(1.08);
+}
+.portfolio-item img{
+transition:0.4s;
+}
+
+.portfolio-item:hover img{
+transform:scale(1.1);
 }
 .testimonials{
 padding:80px 20px;
@@ -238,9 +245,9 @@ color:white;
 cursor:pointer;
 }
 .reveal{
-opacity:1;
-transform:translateY(0);
-transition:all 0.6s ease;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
 }
 
 .reveal.active{
@@ -314,7 +321,7 @@ padding:40px 30px;
 border-radius:12px;
 width:200px;
 text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
@@ -400,22 +407,23 @@ max-width:800px;
 margin:auto;
 padding:60px 20px;
 }
-
 .skill{
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .skill-bar{
 background:#ddd;
 height:10px;
-border-radius:10px;
+border-radius:5px;
 overflow:hidden;
 }
 
 .skill-bar span{
 display:block;
 height:100%;
-background:#0b3d91;
+width:0;
+background:#1e90ff;
+transition:width 2s ease;
 }
 .testimonial{
 display:none;
@@ -491,4 +499,49 @@ border-radius:2px;
 }
 html{
 scroll-behavior:smooth;
+}
+body{
+font-family:'Poppins',sans-serif;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+section{
+padding:100px 20px;
+}
+.social a{
+color:white;
+font-size:22px;
+margin:0 10px;
+transition:0.3s;
+}
+
+.social a:hover{
+color:#1e90ff;
+}
+.project-form{
+max-width:600px;
+margin:auto;
+text-align:center;
+}
+
+.project-form input,
+.project-form textarea,
+.project-form select{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+.project-form button{
+background:#0b3d91;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:6px;
+cursor:pointer;
 }

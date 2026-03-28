@@ -135,3 +135,25 @@ counter.innerText = target;
 updateCounter();
 
 });
+const skillBars = document.querySelectorAll(".skill-bar span");
+
+function animateSkills(){
+
+skillBars.forEach(bar => {
+
+let position = bar.getBoundingClientRect().top;
+let screenHeight = window.innerHeight;
+
+if(position < screenHeight){
+
+let width = bar.getAttribute("data-width");
+bar.style.width = width;
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll", animateSkills);
+
