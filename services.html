@@ -2,6 +2,9 @@
 <html>
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Services | Design With Legacy</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -17,8 +20,8 @@
 </div>
 
 <div class="menu-toggle" id="menu-toggle">☰</div>
-<ul class="nav-links" id="nav-links"></ul>
 
+<ul class="nav-links" id="nav-links">
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="services.html">Services</a></li>
@@ -33,33 +36,33 @@
 <section class="page-header">
 
 </section>
-<section class="services reveal">
+<section class="services">
 
 <h2>My Services</h2>
 
 <div class="services-container">
 
-<div class="service-card">
+<div class="service-card" onclick="openService('logo')">
 <h3>Logo Design</h3>
 <p>Professional logos that make your brand stand out.</p>
 </div>
 
-<div class="service-card">
+<div class="service-card" onclick="openService('logo')">
 <h3>Brand Identity</h3>
 <p>Complete brand design including colors and typography.</p>
 </div>
 
-<div class="service-card">
+<div class="service-card" onclick="openService('logo')">
 <h3>Website Design</h3>
 <p>Modern responsive websites for businesses.</p>
 </div>
 
-<div class="service-card">
+<div class="service-card" onclick="openService('logo')">
 <h3>Flyer & Poster Design</h3>
 <p>Creative marketing materials for your business.</p>
 </div>
 
-<div class="service-card">
+<div class="service-card" onclick="openService('logo')">
 <h3>Content Creation</h3>
 <p>Professional visual content for social media and ads.</p>
 </div>
@@ -67,6 +70,14 @@
 </div>
 
 </section>
+<div id="service-popup" class="popup">
+
+<span id="close-service">&times;</span>
+
+<div class="popup-content" id="service-content"></div>
+
+</div>
+
 <footer class="footer">
 
 <h3>Design With Legacy</h3>

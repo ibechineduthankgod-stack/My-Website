@@ -135,19 +135,20 @@ counter.innerText = target;
 updateCounter();
 
 });
-const skillBars = document.querySelectorAll(".skill-bar span");
+document.addEventListener("DOMContentLoaded", function(){
 
-function animateSkills(){
+const skills = document.querySelectorAll(".skill-bar span");
 
-skillBars.forEach(bar => {
+function showSkills(){
 
-let position = bar.getBoundingClientRect().top;
-let screenHeight = window.innerHeight;
+skills.forEach(skill => {
+
+const position = skill.getBoundingClientRect().top;
+const screenHeight = window.innerHeight;
 
 if(position < screenHeight){
 
-let width = bar.getAttribute("data-width");
-bar.style.width = width;
+skill.style.width = skill.dataset.width;
 
 }
 
@@ -155,5 +156,32 @@ bar.style.width = width;
 
 }
 
-window.addEventListener("scroll", animateSkills);
+window.addEventListener("scroll", showSkills);
+showSkills();
 
+});
+
+function openService(service){
+
+const content = document.getElementById("service-content");
+const popup = document.getElementById("service-popup");
+
+if(service === "logo"){
+content.innerHTML = `
+<h2>Logo Design</h2>
+<p>I create professional brand logos that help businesses stand out and build trust.</p>
+<a href="contact.html" class="btn">Work With Us</a>
+`;
+}
+
+popup.style.display = "flex";
+
+}
+
+const closeService = document.getElementById("close-service");
+
+if(closeService){
+closeService.onclick = ()=>{
+document.getElementById("service-popup").style.display="none";
+};
+}

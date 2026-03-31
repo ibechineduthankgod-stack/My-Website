@@ -106,7 +106,7 @@ padding:40px 20px;
 .portfolio-item{
 position:relative;
 width:100%;
-aspect-ratio:1/1;
+height:250px;
 overflow:hidden;
 border-radius:10px;
 background:#eee;
@@ -200,6 +200,14 @@ align-items:center;
 max-width:1100px;
 margin:auto;
 padding:80px 20px;
+}
+@media(max-width:768px){
+
+.about-container{
+grid-template-columns:1fr;
+text-align:center;
+}
+
 }
 .about-text{
 text-align:center;
@@ -365,7 +373,7 @@ color:#ffd700;
 
 .portfolio-item{
 width:100%;
-aspect-ratio:1/1;
+height:250px;
 overflow:hidden;
 border-radius:10px;
 }
@@ -407,14 +415,15 @@ max-width:800px;
 margin:auto;
 padding:60px 20px;
 }
+
 .skill{
 margin-bottom:25px;
 }
 
 .skill-bar{
 background:#ddd;
-height:10px;
-border-radius:5px;
+height:12px;
+border-radius:6px;
 overflow:hidden;
 }
 
@@ -425,6 +434,7 @@ width:0;
 background:#1e90ff;
 transition:width 2s ease;
 }
+
 .testimonial{
 display:none;
 }
@@ -521,9 +531,23 @@ transition:0.3s;
 .social a:hover{
 color:#1e90ff;
 }
+.contact form{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
 .project-form{
 max-width:600px;
-margin:auto;
+margin:60px auto;
+background:white;
+padding:40px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project-form h2{
+margin-bottom:20px;
 text-align:center;
 }
 
@@ -531,17 +555,58 @@ text-align:center;
 .project-form textarea,
 .project-form select{
 width:100%;
-padding:12px;
-margin:10px 0;
+padding:14px;
+margin-bottom:15px;
 border-radius:6px;
 border:1px solid #ccc;
+font-size:15px;
+}
+
+.project-form textarea{
+height:120px;
+resize:none;
 }
 
 .project-form button{
 background:#0b3d91;
 color:white;
+padding:14px;
 border:none;
-padding:12px 20px;
 border-radius:6px;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.project-form button:hover{
+background:#082c6a;
+}
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+align-items:center;
+justify-content:center;
+z-index:1000;
+}
+
+.popup-content{
+background:white;
+padding:40px;
+border-radius:10px;
+max-width:500px;
+text-align:center;
+}
+
+#close-service{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:white;
 cursor:pointer;
 }
