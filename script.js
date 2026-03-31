@@ -139,14 +139,14 @@ document.addEventListener("DOMContentLoaded", function(){
 
 const skills = document.querySelectorAll(".skill-bar span");
 
-function showSkills(){
+function animateSkills(){
 
 skills.forEach(skill => {
 
-const position = skill.getBoundingClientRect().top;
+const skillTop = skill.getBoundingClientRect().top;
 const screenHeight = window.innerHeight;
 
-if(position < screenHeight){
+if(skillTop < screenHeight - 100){
 
 skill.style.width = skill.dataset.width;
 
@@ -156,8 +156,8 @@ skill.style.width = skill.dataset.width;
 
 }
 
-window.addEventListener("scroll", showSkills);
-showSkills();
+window.addEventListener("scroll", animateSkills);
+animateSkills();
 
 });
 
